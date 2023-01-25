@@ -1,0 +1,343 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Playfair+Display+SC:wght@700&display=swap');
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* vars */
+:root {
+    /* BG COLORS */
+    --BG-COLOR: hsl(214, 48%, 39%);
+    --BG-IMAGE: linear-gradient(to right, hsl(215, 38%, 30%), hsl(213, 41%, 34%));
+    --BG-LIGHT: hsl(138, 38%, 87%);
+
+    /* TEXT COLOR */
+    --TEXT-COLOR-WHITE: #637a96;
+    --TEXT-COLOR-DARK: aliceblue;
+    --TEXT-BRAND-COLOR: hsl(47, 70%, 78%);
+    --TEXT-TITLE-COLOR: hsla(214, 40%, 40%);
+    --TEXT-HIGHLIGHT-COLOR: #7dd897;
+    --TEXT-HIGHLIGHT-FADE-COLOR: hsl(138, 73%, 52%);
+    --TEXT-SUBTITLE-COLOR: hsl(215, 23%, 84%);
+
+    /* FONT FAMILY */
+    --FF: 'Merriweather Sans', sans-serif;
+    --FF-HEADER: 'Playfair Display SC', serif;
+    /* FONT SIZE */
+    --FS-BIG: clamp(2rem, 3vw, 3.5rem);
+    --FS-MEDIUM: clamp(1.3rem, 1.7vw, 2.3rem);
+    --FS-SMALL: clamp(0.9rem, 1.4vw, 1.27rem);
+    --FS-LOGO: clamp(0.83rem, 2.9vw, 1.6rem);
+
+
+}
+
+/* general styles */
+
+html {
+    background-color: var(--BG-LIGHT);
+    padding: 0%;
+}
+
+body {
+    background-color: var(--BG-LIGHT);
+    font-family: var(--FF);
+
+    margin: 0 2%;
+}
+
+
+/* HEadings */
+
+.white__title {
+    background-color: var(--TEXT-COLOR-DARK);
+    color: var(--TEXT-TITLE-COLOR);
+    font-family: var(--FF-HEADER);
+    font-size: var(--FS-BIG);
+}
+
+.blue__title {
+    font-size: var(--FS-BIG);
+    font-family: var(--FF-HEADER);
+}
+
+.big__header {
+    font-size: var(--FS-MEDIUM);
+    font-family: var(--FF-HEADER);
+    font-weight: 300;
+    color: var(--TEXT-BRAND-COLOR);
+    line-height: 1.3;
+    margin: 0.5%;
+}
+
+.medium__header {
+    font-size: var(--FS-MEDIUM);
+    font-family: var(--FF-HEADER);
+    font-weight: 900;
+    color: var(--TEXT-TITLE-COLOR);
+    text-align: left;
+    margin-bottom: 3%;
+    letter-spacing: 1px;
+}
+
+.sub__header {
+    color: var(--TEXT-COLOR-WHITE);
+    font-size: var(--FS-SMALL);
+}
+
+
+/* COntainers */
+
+.container-post {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2%;
+}
+
+.label__blue {
+    color: var(--TEXT-TITLE-COLOR);
+    font-size: var(--FS-MEDIUM);
+    font-family: inherit;
+}
+
+
+
+.container-section {
+    margin: 10% 0;
+}
+
+.container-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 90px;
+    padding: 3%;
+    margin: 5% 0;
+}
+
+#personal .container-content {
+    align-items: baseline;
+}
+
+/* Utils */
+
+.round__corners {
+    border-radius: 2%;
+}
+
+.bg__image {
+    background-image: var(--BG-IMAGE);
+}
+
+.bg_blue {
+    background-image: var(--BG-NAV);
+}
+
+.myShadow {
+    box-shadow: -10px 10px 10px rgb(80, 107, 112);
+}
+
+.center {
+    text-align: center;
+}
+
+.nowrap {
+    word-wrap: nowrap;
+}
+
+
+.pos-absolute {
+    position: absolute;
+}
+.greyout {
+    color: #637a96;
+}
+
+/* title  section*/
+#title {
+    color: var(--TEXT-COLOR-DARK);
+}
+
+.drawing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+/* #title .img-fluid {
+    border:1px solid var(--BG-LIGHT-FADE);
+    border-radius: 0.1%;
+} */
+
+
+/* NAVBAR */
+.navbar-brand {
+    color: var(--TEXT-BRAND-COLOR);
+    cursor: default;
+    font-family: var(--FF-HEADER);
+    font-size: var(--FS-LOGO);
+    padding-left: 10px;
+}
+
+.navbar-brand:hover {
+    color: var(--TEXT-BRAND-COLOR);
+}
+
+.navbar {
+    /* background-image: linear-gradient(to top, hsl(219, 28%, 39%),hsl(214, 30%, 39%), hsl(214, 60%, 65%)); */
+    background-color: hsl(214, 48%, 39%);
+    background-image: var(--BG-IMAGE);
+}
+
+.nav-link {
+    color: hsl(47, 34%, 80%);
+    font-size: var(--FS-SMALL);
+    font-family: var(--FF-HEADER);
+}
+
+.nav-link:hover {
+    color: #FADB69;
+}
+
+
+
+/* feauteres */
+#features {
+    user-select: none;
+
+}
+
+
+
+.features__icon {
+    font-size: var(--FS-BIG);
+    color: var(--TEXT-HIGHLIGHT-COLOR);
+
+}
+
+.features__icon:hover {
+    color: hsl(138, 73%, 52%);
+}
+
+/* Infos */
+#informations {
+    font-family: var(--FF);
+    font-size: var(--FS-SMALL);
+    color: var(--TEXT-COLOR-DARK);
+    letter-spacing: 1.3px;
+    line-height: 1.5;
+}
+
+
+/* Carosel */
+
+
+.carosel__item {
+    display: none;
+    cursor: pointer;
+}
+
+
+.carosel__active {
+    display: block;
+
+}
+
+.informations__sub {
+    font-family: var(--FF-HEADER);
+    font-size: var(--FS-LOGO);
+    color: var(--TEXT-SUBTITLE-COLOR);
+}
+
+/* Personal */
+
+#personal {
+    color: var(--TEXT-COLOR-WHITE);
+    font-family: var(--FF);
+    font-size: var(--FS-SMALL);
+}
+
+
+
+#personal .card {
+    background-color: var(--TEXT-COLOR-DARK);
+    display: block;
+    text-align: left;
+    border: none;
+}
+
+#personal .card-header {
+    font-family: var(--FF-HEADER);
+    font-size: var(--FS-MEDIUM);
+    color: var(--TEXT-TITLE-COLOR);
+}
+
+
+
+/* FOOTER */
+
+#footer {
+    background-color: var(--BG-COLOR);
+    background-image: var(--BG-IMAGE);
+    font-family: var(--FF);
+    font-size: var(--FS-SMALL);
+    color: var(--TEXT-SUBTITLE-COLOR);
+}
+
+
+#footer a {
+    display: inline-block;
+    color: var(--TEXT-BRAND-COLOR);
+    font-family: var(--FF-HEADER);
+    text-decoration: none;
+    margin-bottom: 2%;
+    padding: 0.5%;
+
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+
+    body {
+        margin: 0 1%;
+    }
+
+    .container-section {
+        margin: 5% 0;
+    }
+
+    .container-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 90px;
+        padding: 3%;
+        margin: 3% 0;
+    }
+
+    .informations__sub {
+        text-align: left;
+    }
+}
